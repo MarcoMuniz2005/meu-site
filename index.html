@@ -1,30 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-  <link rel="stylesheet" href="./CSS/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenho algo pra te dizer...</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+      color: #333;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    .scroll-button {
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .scroll-button:hover {
+      background-color: #ff4757;
+    }
+    #next-section {
+      height: 100vh;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <div id="popup">
-    <div id="popup-content">
-      <p>Digite a resposta correta para entrar:</p>
-      <input type="text" id="resposta" placeholder="Sua resposta aqui">
-      <br>
-      <button onclick="verificarResposta()">Entrar</button>
-      <div id="error"></div>
-    </div>
-  </div>
 
-  <div id="conteudo" style="display: none;">
-    <h1>Bem-vindo ao site secreto!</h1>
-    <p>Aqui está o conteúdo protegido.</p>
-  </div>
+  <!-- Página Inicial -->
+  <section class="hero">
+    <h1>Tenho algo muito especial pra te dizer...</h1>
+    <button class="scroll-button" onclick="document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' })">
+      Clique para continuar
+    </button>
+  </section>
 
-  <h1>Conteúdo do site</h1>
-  <script src="./JS/codigo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Próxima seção (vamos completar nas próximas etapas) -->
+  <section id="next-section">
+    Aqui começa a nossa história... 💕
+  </section>
+
 </body>
 </html>
