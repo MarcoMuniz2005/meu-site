@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <title>Tenho algo pra te dizer...</title>
   <style>
     html {
       scroll-behavior: smooth;
+    }
+    body.no-scroll {
+      overflow: hidden;
     }
     body {
       margin: 0;
@@ -48,6 +53,22 @@
       justify-content: center;
       font-size: 2rem;
     }
+
+    .timeline-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 20px;
+    }
+    .timeline-card {
+      display: inline-block;
+      width: 300px;
+      margin-right: 20px;
+      vertical-align: top;
+    }
+    .timeline-card img {
+      height: 200px;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -62,8 +83,65 @@
 
   <!-- Próxima seção (vamos completar nas próximas etapas) -->
   <section id="next-section">
-    Aqui começa a nossa história... 💕
+    Mas antes, queria relembrar alguns momentos importantes
   </section>
 
+   <section class="text-center py-5 bg-white">
+    <h2 class="mb-4" style="color: #ff6b81;">Nossa história 💖</h2>
+    
+    <div class="timeline-wrapper">
+
+      <!-- Card 1 -->
+      <div class="card timeline-card">
+        <img src="foto1.jpg" class="card-img-top" alt="Primeiro encontro">
+        <div class="card-body">
+          <h5 class="card-title">10/03/2023</h5>
+          <p class="card-text">Nosso primeiro encontro... frio na barriga e coração acelerado.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card timeline-card">
+        <img src="foto2.jpg" class="card-img-top" alt="Viagem">
+        <div class="card-body">
+          <h5 class="card-title">22/06/2023</h5>
+          <p class="card-text">Aquela viagem que mudou tudo. Momentos inesquecíveis.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card timeline-card">
+        <img src="foto3.jpg" class="card-img-top" alt="Dia especial">
+        <div class="card-body">
+          <h5 class="card-title">14/02/2024</h5>
+          <p class="card-text">O dia que percebi: era você desde o começo.</p>
+        </div>
+      </div>
+
+      <div class="card timeline-card">
+        <img src="foto3.jpg" class="card-img-top" alt="Dia especial">
+        <div class="card-body">
+          <h5 class="card-title">14/02/2024</h5>
+          <p class="card-text">O dia que percebi: era você desde o começo.</p>
+        </div>
+      </div>
+
+      <div class="card timeline-card">
+        <img src="foto3.jpg" class="card-img-top" alt="Dia especial">
+        <div class="card-body">
+          <h5 class="card-title">14/02/2024</h5>
+          <p class="card-text">O dia que percebi: era você desde o começo.</p>
+        </div>
+      </div>
+  </div>
+
+  <section id="carta" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; background: #fff0f5;">
+  <div class="carta-container">
+    <p class="carta-text" id="textoDigitado"></p>
+    <button class="scroll-button mt-4" onclick="liberarScroll()">
+      Continuar 💌
+    </button>
+  </div>
+</section>
 </body>
 </html>
