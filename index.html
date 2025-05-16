@@ -302,19 +302,27 @@ Tenho algo importante pra te perguntar...`;
   const btnNao = document.getElementById("btn-nao");
   const container = document.getElementById("btn-container");
 
-  btnNao.addEventListener("mouseenter", () => {
-    const containerRect = container.getBoundingClientRect();
-    const btnRect = btnNao.getBoundingClientRect();
+  function moverBotaoNao() {
+  const containerRect = container.getBoundingClientRect();
+  const btnRect = btnNao.getBoundingClientRect();
 
-    const maxLeft = container.clientWidth - btnNao.offsetWidth;
-    const maxTop = container.clientHeight - btnNao.offsetHeight;
+  const maxTop = container.clientHeight - btnNao.offsetHeight;
+  const maxLeft = container.clientWidth - btnNao.offsetWidth;
 
-    const randomLeft = Math.floor(Math.random() * maxLeft);
-    const randomTop = Math.floor(Math.random() * maxTop);
+  const top = Math.random() * maxTop;
+  const left = Math.random() * maxLeft;
 
-    btnNao.style.left = `${randomLeft}px`;
-    btnNao.style.top = `${randomTop}px`;
-  });
+  btnNao.style.top = `${top}px`;
+  btnNao.style.left = `${left}px`;
+}
+// Fugir no desktop com mouse
+btnNao.addEventListener("mouseenter", moverBotaoNao);
+
+// Fugir no mobile com toque
+btnNao.addEventListener("touchstart", (e) => {
+  e.preventDefault(); // evita clicar por acidente
+  moverBotaoNao();
+});
 
   // Quando a pessoa clica em "Sim"
   function responderSim() {
