@@ -56,7 +56,8 @@
     .timeline-card {
       display: inline-block;
       width: 250px;
-      margin-right: 15px;
+      height: 280px;
+      margin-right: 10px;
       vertical-align: top;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       border-radius: 10px;
@@ -65,10 +66,16 @@
     }
     .timeline-card img {
       width: 100%;
-      height: 150px;
+      height: 220px;
       object-fit: cover;
       border-radius: 10px 10px 0 0;
+      max-height: 220px; /* define um limite de altura se necessário */
     }
+
+    #img1{
+      object-position: center 25%;
+    }
+
     .timeline-card .card-body {
       padding: 10px;
       font-size: 0.9rem;
@@ -195,7 +202,7 @@
     <h2 style="color: #ff6b81;">Nossa história 💖</h2>
     <div class="timeline-wrapper" tabindex="0" aria-label="Linha do tempo de fotos e datas">
       <div class="timeline-card">
-        <img src="img/img1.png" alt="Primeiro encontro" />
+        <img src="img/img1.png" id="img1" alt="Primeiro encontro" />
         <div class="card-body">
           <h5>09/11/2024</h5>
           <p>A primeira vez que eu te vi</p>
@@ -203,7 +210,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img2.jpg" alt="Primeiro encontro" />
+        <img src="img/img2.jpg" id="img2" alt="Primeiro encontro" />
         <div class="card-body">
           <h5>16/12/2024</h5>
           <p>Nataall 🎄</p>
@@ -211,7 +218,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img3.jpg" alt="Primeiro encontro" />
+        <img src="img/img3.jpg" id="img3" alt="Primeiro encontro" />
         <div class="card-body">
           <h5>25/12/2024</h5>
           <p>Suas</p>
@@ -219,7 +226,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img4.jpg" alt="Viagem" />
+        <img src="img/img4.jpg" id="img4" alt="Viagem" />
         <div class="card-body">
           <h5>25/12/2024</h5>
           <p>Cartinhas</p>
@@ -227,7 +234,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img5.jpg" alt="Dia especial" />
+        <img src="img/img5.jpg" id="img5" alt="Dia especial" />
         <div class="card-body">
           <h5>01/01/2025</h5>
           <p>Pra mim</p>
@@ -235,7 +242,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img6.jpg" alt="Dia especial" />
+        <img src="img/img6.jpg" id="img6" alt="Dia especial" />
         <div class="card-body">
           <h5>11/01/2025</h5>
           <p>Quando agnt se viu antes de eu viajar</p>
@@ -243,15 +250,15 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img7.jpg" alt="Dia especial" />
+        <img src="img/img7.jpg" id="img7" alt="Dia especial" />
         <div class="card-body">
           <h5>04/02/2025</h5>
-          <p>Quando eu fui aí pegar meu presente de aniversário</p>
+          <p>Quando eu fui pegar meu presente</p>
         </div>
       </div>
 
       <div class="timeline-card">
-        <img src="img/img8.jpg" alt="Dia especial" />
+        <img src="img/img8.jpg" id="img8" alt="Dia especial" />
         <div class="card-body">
           <h5>16/02/2025</h5>
           <p>O passeio pro Planetário 🎆</p>
@@ -259,7 +266,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img9.jpg" alt="Dia especial" />
+        <img src="img/img9.jpg" id="img9" alt="Dia especial" />
         <div class="card-body">
           <h5>04/03/2025</h5>
           <p>Eu te amo pra krlh sabia?</p>
@@ -267,7 +274,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img10.jpg" alt="Dia especial" />
+        <img src="img/img10.jpg" id="img10" alt="Dia especial" />
         <div class="card-body">
           <h5>17/03/2025</h5>
           <p>Aniversário da minha irmã 😛</p>
@@ -275,7 +282,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img11.jpg" alt="Dia especial" />
+        <img src="img/img11.jpg" id="img11" alt="Dia especial" />
         <div class="card-body">
           <h5>30/04/2025</h5>
           <p>Lov u ❤️</p>
@@ -283,7 +290,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img12.jpg" alt="Dia especial" />
+        <img src="img/img12.jpg" id="img12" alt="Dia especial" />
         <div class="card-body">
           <h5>08/06/2025</h5>
           <p>Eu sou muito muito feliz com vc</p>
@@ -291,7 +298,7 @@
       </div>
 
       <div class="timeline-card">
-        <img src="img/img13.jpg" alt="Dia especial" />
+        <img src="img/img13.jpg" id="img13" alt="Dia especial" />
         <div class="card-body">
           <h5>08/06/2025</h5>
           <p>EU TE AMO</p>
